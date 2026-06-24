@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART KING Payment Services Provider - Integrated Digital Payment Solutions</title>
+    <!-- Google Fonts for Professional Noto Sans & Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #d32f2f;
+            --dark-bg: #111111;
+            --text-dark: #333333;
+            --text-light: #ffffff;
+            --border-gray: #e0e0e0;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans', 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* ------------------ Header ------------------ */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border-gray);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Side Menu Toggle (3 lines) */
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 22px;
+            height: 15px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: var(--text-dark);
+            border-radius: 2px;
+        }
+
+        /* Company Name in Single Line & Small Font */
+        .company-logo-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--primary-red);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        /* Language Switch Button */
+        .lang-switch-btn {
+            background-color: transparent;
+            border: 1px solid var(--primary-red);
+            color: var(--primary-red);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-switch-btn:hover {
+            background-color: var(--primary-red);
+            color: var(--text-light);
+        }
+
+        /* ------------------ Hero Section ------------------ */
+        .hero-section {
+            text-align: center;
+            padding: 50px 20px 30px 20px;
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .hero-section h1 {
+            font-size: 24px;
+            color: var(--text-dark);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero-section p {
+            font-size: 16px;
+            color: #666666;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        /* ------------------ Service Action Buttons ------------------ */
+        .action-buttons-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 40px 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .service-btn {
+            width: 100%;
+            background-color: var(--primary-red);
+            color: var(--text-light);
+            border: none;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(211, 47, 47, 0.15);
+        }
+
+        .service-btn:hover {
+            background-color: #b71c1c;
+            transform: translateY(-1px);
+        }
+
+        /* ------------------ FAQ Accordion Section ------------------ */
+        .faq-section {
+            width: 90%;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .faq-section-title {
+            text-align: center;
+            font-size: 22px;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .faq-card {
+            background-color: var(--card-bg);
+            border: 2px solid var(--primary-red);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .faq-question-btn {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s ease;
+        }
+
+        .faq-question-btn:hover {
+            background-color: #fff8f8;
+        }
+
+        .faq-icon {
+            color: var(--primary-red);
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .faq-answer-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            background-color: #fafafa;
+            padding: 0 20px;
+        }
+
+        .faq-answer-content p {
+            font-size: 14px;
+            color: #555555;
+            padding-bottom: 18px;
+            text-align: justify;
+        }
+
+        .faq-card.active .faq-answer-content {
+            max-height: 200px;
+            padding-top: 5px;
+        }
+
+        /* ------------------ Policy Links ------------------ */
+        .policy-links-container {
+            text-align: center;
+            padding: 20px 20px 50px 20px;
+            border-top: 1px solid var(--border-gray);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .policy-link {
+            color: #555555;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+
+        .policy-link:hover {
+            color: var(--primary-red);
+            text-decoration: underline;
+        }
+
+        /* ------------------ Footer ------------------ */
+        footer {
+            background-color: var(--dark-bg);
+            color: #b3b3b3;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 14px;
+            border-top: 4px solid var(--primary-red);
+        }
+
+        .footer-content {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .license-details-box {
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #222222;
+        }
+
+        .license-details-box strong {
+            color: var(--text-light);
+        }
+
+        .footer-bottom-copyright {
+            color: #888888;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+
+        .footer-bottom-copyright span {
+            color: var(--text-light);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="menu-toggle" id="sideMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <a href="#" class="company-logo-name">SMART KING Payment Services Provider</a>[cite: 1]
+            
+            <button class="lang-switch-btn" onclick="switchToArabic()">العربية</button>
+        </div>
+    </header>
+
+    <!-- Hero Title Under Header -->
+    <section class="hero-section">
+        <h1>SMART KING Payment Services Provider</h1>[cite: 1]
+        <p>Integrated solutions for balance recharge and bill payments with SMART KING</p>
+    </section>
+
+    <!-- Two Action Buttons -->
+    <main>
+        <div class="action-buttons-container">
+            <button class="service-btn" onclick="handleServiceClick('recharge')">Recharge Your Line</button>
+            <button class="service-btn" onclick="handleServiceClick('payment')">Pay Bills</button>
+        </div>
+
+        <!-- 10 FAQ Cards -->
+        <section class="faq-section">
+            <h2 class="faq-section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>What is SMART KING platform?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>We are a licensed, independent digital payment technology gateway specialized in facilitating public service fees and aggregating utility and telecom bill collections for consumers safely and smoothly.[cite: 1]</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>Is SMART KING affiliated with a specific telecom network?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>No, we are a completely independent technical processing platform. We do not claim or represent any exclusive agency or official corporate partnership with any specific telecommunication operator. Brand references serve strictly a descriptive functional purpose for user navigation.[cite: 1]</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>What services can I complete via the website?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>You can leverage our integrated solutions to securely execute instant top-ups, process telecommunication utility settlements, and clear registered service dues through our secure portal interface.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>Are payments processed through the gateway secure?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>Yes, all transactions and settlements passing through our system architecture are fully encrypted using advanced SSL protocols to guarantee full confidentiality and end-user data security.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>What is the officially approved commercial activity of the platform?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>The company's officially authorized and regulated activity under its commercial trade license issued by the Dubai Department of Economy and Tourism is Fees Collection & Payment Services.[cite: 1]</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>How long does it take to settle a bill or recharge a balance?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>Payments are instantly passed and verified through our automated processing engines. Settlements are dynamically updated and reflected in your service account balances immediately after proper confirmation.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>How can I verify the platform's official government licensing?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>You can cross-reference our public Commercial License No. 1563123 directly on the official electronic registration database portal maintained by the Dubai Department of Economy and Tourism to confirm our valid legal status.[cite: 1]</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>Are there any hidden fees for these aggregation services?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>All processing costs and nominal administrative fees are presented transparently within the transactional payment template prior to confirming any settlement, with zero hidden charges.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>What is the refund policy in case of a processing error?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>In the event of a structural technical anomaly or unfulfilled clearing, the transaction is systematically reviewed, and funds are automatically re-routed to the original payment channel according to our Refund Policy.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>How can I contact the platform's customer support?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>You can easily reach out to our technical support team and corporate channels through the official contact protocols listed comprehensively inside our Terms and Conditions documentation.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="policy-links-container">
+            <a href="privacy.html" class="policy-link">Privacy Policy</a>
+            <a href="terms.html" class="policy-link">Terms and Conditions</a>
+            <a href="disclaimer.html" class="policy-link">Legal Disclaimer</a>
+            <a href="refund.html" class="policy-link">Refund and Cancellation Policy</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="license-details-box">
+                <strong>Legal Corporate Metadata:</strong><br>
+                Commercial License No: 1563123 | Unified License No: ES3679[cite: 1]<br>
+                Licensing Authority: Dubai Department of Economy and Tourism (DET), United Arab Emirates[cite: 1]<br>
+                Approved Business Activity: Fees Collection & Payment Services[cite: 1]<br>
+                Registered Address: Office 411-9, Al Khabeesi, Deira, Dubai, P.O. Box: 47867[cite: 1]
+            </div>
+            
+            <hr style="border: 0; border-top: 1px solid #222222; margin: 15px 0;">
+            
+            <div class="footer-bottom-copyright">
+                &copy; 2026 All Rights Reserved. This website is operated by <span>SMART KING Payment Services Provider</span>[cite: 1]
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchToArabic() {
+            window.location.href = "ar.html";
+        }
+
+        function handleServiceClick(serviceType) {
+            console.log("Service selected:", serviceType);
+        }
+
+        const faqButtons = document.querySelectorAll('.faq-question-btn');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.parentElement;
+                const icon = button.querySelector('.faq-icon');
+                
+                document.querySelectorAll('.faq-card').forEach(otherCard => {
+                    if (otherCard !== card && otherCard.classList.contains('active')) {
+                        otherCard.classList.remove('active');
+                        otherCard.querySelector('.faq-icon').textContent = '+';
+                    }
+                });
+
+                card.classList.toggle('active');
+                if (card.classList.contains('active')) {
+                    icon.textContent = '−';
+                } else {
+                    icon.textContent = '+';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
