@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="htmlPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Disclaimer - SMART KING Payment Services Provider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #d32f2f;
+            --dark-bg: #111111;
+            --text-dark: #333333;
+            --text-light: #ffffff;
+            --border-gray: #e0e0e0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #f9f9f9; color: var(--text-dark); font-family: 'Noto Sans', 'Cairo', sans-serif; line-height: 1.8; padding-bottom: 60px; }
+        header { background-color: #ffffff; border-bottom: 1px solid var(--border-gray); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .header-container { width: 90%; max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo-text { font-size: 16px; font-weight: 700; color: var(--primary-red); text-decoration: none; }
+        .lang-btn { background-color: var(--primary-red); color: white; border: none; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; }
+        .content-container { width: 90%; max-width: 1000px; margin: 40px auto; background: #ffffff; padding: 40px; border-radius: 8px; border: 1px solid var(--border-gray); box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+        h1 { font-size: 26px; color: var(--primary-red); margin-bottom: 10px; border-bottom: 2px solid var(--primary-red); padding-bottom: 15px; }
+        .meta-date { font-size: 13px; color: #777; margin-bottom: 30px; }
+        .policy-section { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px dashed #eee; }
+        .policy-section h2 { font-size: 16px; color: #111; margin-bottom: 10px; font-weight: 700; }
+        .policy-section p { font-size: 14px; color: #555; text-align: justify; }
+        .back-home { display: inline-block; margin-top: 20px; color: var(--primary-red); text-decoration: none; font-weight: 600; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-text" id="logoText">SMART KING PSP</a>[cite: 1]
+            <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">العربية</button>
+        </div>
+    </header>
+
+    <div class="content-container">
+        <h1 id="mainTitle">Legal Disclaimer</h1>
+        <div class="meta-date" id="metaDate">Last Updated: June 24, 2026</div>
+
+        <div id="policyContent"></div>
+
+        <a href="index.html" class="back-home" id="backHomeLink">← Back to Main Page</a>
+    </div>
+
+    <script>
+        let currentLang = 'en';
+        const data = {
+            en: {
+                logo: "SMART KING Payment Services Provider",[cite: 1]
+                title: "Legal Disclaimer",
+                date: "Last Updated: June 24, 2026",
+                back: "← Back to Main Page",
+                btn: "العربية",
+                sections: [
+                    { h: "1. General Information Disclaimer", p: "The information provided by SMART KING Payment Services Provider is for general operational guidance only. While we endeavor to keep data accurate, we make no representations of any kind regarding completeness.[cite: 1]" },
+                    { h: "2. No Warranties Provided", p: "All content, including utility billing templates and service aggregation interfaces, is provided 'as is' without any express or implied warranty of any kind." },
+                    { h: "3. Independent Operational Capacity", p: "We operate as a completely independent digital technology gateway. We are not an official branch, authorized agent, or subsidiary of any telecommunication network.[cite: 1]" },
+                    { h: "4. Third-Party Brand Usage", p: "References to telecom operators, utility companies, or public service entities are purely for descriptive navigation and do not constitute corporate endorsements." },
+                    { h: "5. Limitation of Structural Responsibility", p: "Under no circumstances shall our directors or developers be liable for technical interruptions caused by third-party hosting or regional network outages.[cite: 1]" },
+                    { h: "6. Transactional Finality", p: "Users are strictly responsible for confirming data inputs before finalizing payments, as electronic submissions are processed through automated engines instantly." },
+                    { h: "7. Accuracy of Regulatory Data", p: "We strive to reflect active commercial status based on DET filings; however, users should verify current status directly via official government registries.[cite: 1]" },
+                    { h: "8. External Hyperlink Risks", p: "Our platform may contain links to external portals. We do not control and are not accountable for the security or privacy practices of these third-party environments." },
+                    { h: "9. Technical Malfunctions Disclaimer", p: "We do not guarantee that the portal will be free from temporary technical glitches or that errors in the HTML/CSS rendering will be immediately patched." },
+                    { h: "10. Financial Responsibility Acknowledgement", p: "You acknowledge that SMART KING is a processing facilitator, not a financial bank, and does not hold individual deposit balances." },
+                    { h: "11. Limitation on Damages", p: "In no event shall the platform be responsible for any incidental, indirect, or consequential damages arising from the use of the aggregation portal." },
+                    { h: "12. Regulatory Change Sensitivity", p: "Information provided herein may be superseded by rapid adjustments in regional digital payment regulations or corporate legal requirements." },
+                    { h: "13. User Data Input Liability", p: "The platform disclaims all liability for erroneous account identifiers provided by the user, which result in successful processing to unintended target accounts." },
+                    { h: "14. No Investment Advice", p: "Nothing contained on this website constitutes financial investment, banking, or legal advice. All services are strictly limited to payment processing." },
+                    { h: "15. Availability of Services", p: "We reserve the right to modify or discontinue any part of our service portal at any time without notice, particularly during maintenance windows." },
+                    { h: "16. Security Breach Liability", p: "While we employ industrial-grade SSL, no data transmission over the internet is 100% secure. You use the service at your own inherent risk." },
+                    { h: "17. Content Ownership Rights", p: "All textual and graphical assets, excluding descriptive third-party trademarks, are the protected intellectual property of SMART KING PSP.[cite: 1]" },
+                    { h: "18. Jurisdiction of Legal Disputes", p: "Any legal claim relating to the use of this portal shall be governed exclusively by the laws applicable in the Emirate of Dubai, UAE." },
+                    { h: "19. Interpretation of Terms", p: "The headings in this disclaimer are for convenience only and shall not be used to restrict or interpret the substantive sections herein." },
+                    { h: "20. Service Usage Volition", p: "Your access to this portal is entirely voluntary. By using the portal, you waive all rights to pursue claims against our structural setup." },
+                    { h: "21. Electronic Transmission Errors", p: "We are not responsible for delays in the actual reflecting of payments on service provider portals once we have successfully routed the transaction." },
+                    { h: "22. Non-Guarantee of System Performance", p: "We provide no guarantees that the interface will function seamlessly on obsolete, non-standard, or unsupported web browser versions." },
+                    { h: "23. Disclaimer of Implicit Partnerships", p: "No agency, partnership, joint venture, or employment relationship is created as a result of using our payment aggregation services." },
+                    { h: "24. Accuracy of Pricing Information", p: "While we display administrative fees transparently, we are not liable for changes in service provider billing structures that might alter final total amounts." },
+                    { h: "25. Compliance with Local Norms", p: "Users are responsible for ensuring that their use of our digital portal complies with the local laws of their specific residency." },
+                    { h: "26. Errors and Omissions Clause", p: "We disclaim any and all liability for errors or omissions in the text or transactional logic provided on this interface." },
+                    { h: "27. No Personal Data Storage", p: "We explicitly disclaim holding permanent sensitive consumer data, as sessions are processed in real-time and purged automatically." },
+                    { h: "28. Usage of Automated Tools", p: "Accessing the platform through bots, scrapers, or automated harvesters is prohibited and constitutes a violation of this legal disclaimer." },
+                    { h: "29. Severability of Provisions", p: "If any part of this disclaimer is held to be invalid, that part shall be severed and the remaining 34 provisions shall remain fully in effect." },
+                    { h: "30. Governing Language Policy", p: "In the event of any discrepancies between the English and Arabic versions of this disclaimer, the English version shall technically prevail." },
+                    { h: "31. Authority to Amend", p: "Only authorized corporate representatives have the authority to amend this disclaimer, and such amendments are published immediately upon deployment." },
+                    { h: "32. Indemnity Against Misuse", p: "Users agree to protect the company against all legal claims resulting from any fraudulent data entry or malicious utilization of the interface." },
+                    { h: "33. Technical Support Limitations", p: "Our support channels are for general inquiry only and do not provide legal or financial counseling services." },
+                    { h: "34. Finality of Electronic Logs", p: "In any conflict, the automated server-side logs maintained by SMART KING PSP shall serve as the definitive record of transaction attempts." },
+                    { h: "35. Absolute Acceptance", p: "Your continued usage of this platform constitutes a final and absolute acceptance of this legal disclaimer in its entirety." }
+                ]
+            },
+            ar: {
+                logo: "سمارت كينج موفر خدمات الدفع",[cite: 1]
+                title: "إخلاء المسؤولية القانونية",
+                date: "آخر تحديث: 24 يونيو 2026",
+                back: "← العودة للصفحة الرئيسية",
+                btn: "English",
+                sections: [
+                    { h: "1. إخلاء مسؤولية المعلومات العامة", p: "المعلومات المقدمة من شركة سمارت كينج موفر خدمات الدفع هي لأغراض التوجيه التشغيلي العام فقط. ومع سعينا لدقة البيانات، لا نقدم أي تعهدات بخصوص اكتمالها.[cite: 1]" },
+                    { h: "2. عدم تقديم ضمانات", p: "يتم تقديم جميع المحتويات، بما في ذلك نماذج دفع الفواتير وواجهات تجميع الخدمات، 'كما هي' وبدون أي ضمانات صريحة أو ضمنية." },
+                    { h: "3. الاستقلالية التشغيلية للمنصة", p: "نعمل كبوابة تكنولوجية رقمية مستقلة تماماً. نحن لسنا فرعاً رسمياً أو وكيلاً معتمداً أو شركة تابعة لأي شبكة اتصالات.[cite: 1]" },
+                    { h: "4. استخدام العلامات التجارية للغير", p: "إن الإشارة إلى مشغلي الاتصالات أو شركات الخدمات هي لأغراض الملاحة الوصفية فقط ولا تشكل بأي حال من الأحوال أي تأييد مؤسسي." },
+                    { h: "5. حدود المسؤولية الهيكلية", p: "لا يتحمل مديرونا أو مطورونا تحت أي ظرف من الظروف المسؤولية عن الانقطاعات التقنية الناتجة عن استضافة الطرف الثالث أو أعطال الشبكات الإقليمية.[cite: 1]" },
+                    { h: "6. نهائية المعاملات المالية", p: "يتحمل المستخدمون المسؤولية الكاملة عن تأكيد صحة البيانات قبل إتمام الدفع، حيث تُعالج الطلبات إلكترونياً عبر محركات آلية فورية." },
+                    { h: "7. دقة البيانات التنظيمية", p: "نسعى لعكس الوضع التجاري الفعلي وفق سجلات دائرة الاقتصاد والسياحة، ولكن يجب على المستخدمين التحقق عبر السجلات الحكومية الرسمية.[cite: 1]" },
+                    { h: "8. مخاطر الروابط الخارجية", p: "قد تحتوي منصتنا على روابط لمواقع خارجية؛ نحن لا نتحكم ولا نتحمل أي مسؤولية عن ممارسات الأمن أو الخصوصية في تلك البيئات." },
+                    { h: "9. إخلاء مسؤولية الأعطال التقنية", p: "لا نضمن أن البوابة ستكون خالية من الأخطاء التقنية المؤقتة أو أنه سيتم معالجة أخطاء العرض في واجهات HTML/CSS فوراً." },
+                    { h: "10. الإقرار بالمسؤولية المالية", p: "أنت تقر بأن سمارت كينج هي وسيط لتسهيل معالجة العمليات، وليست بنكاً مالياً، ولا نحتفظ بأي ودائع أو أرصدة فردية." },
+                    { h: "11. تحديد حجم التعويضات", p: "لا تتحمل المنصة في أي حال من الأحوال المسؤولية عن أي أضرار عرضية أو غير مباشرة ناتجة عن استخدام بوابة التجميع." },
+                    { h: "12. الحساسية للتغييرات التنظيمية", p: "المعلومات الواردة هنا قد يتم تجاوزها نتيجة التعديلات السريعة في لوائح الدفع الرقمي الإقليمية أو المتطلبات القانونية للشركات." },
+                    { h: "13. المسؤولية عن إدخال بيانات المستخدم", p: "تخلي المنصة مسؤوليتها الكاملة عن معرفات الحسابات الخاطئة التي يقدمها المستخدم والتي تؤدي لنجاح المعالجة في حسابات غير مقصودة." },
+                    { h: "14. عدم تقديم استشارات مالية", p: "لا يعتبر أي محتوى في هذا الموقع استشارة مالية أو بنكية أو قانونية. تقتصر جميع خدماتنا حصرياً على معالجة المدفوعات." },
+                    { h: "15. توفر الخدمات التقنية", p: "نحتفظ بالحق في تعديل أو إيقاف أي جزء من بوابة الخدمة في أي وقت دون إشعار، خاصة أثناء فترات الصيانة." },
+                    { h: "16. المسؤولية عن الثغرات الأمنية", p: "رغم استخدامنا لبروتوكولات SSL الصناعية، لا يمكن ضمان أمن نقل البيانات عبر الإنترنت بنسبة 100%. استخدامك للخدمة على مسؤوليتك الخاصة." },
+                    { h: "17. حقوق ملكية المحتوى", p: "جميع الأصول النصية والرسومية، باستثناء العلامات التجارية الوصفية للغير، هي ملكية فكرية محمية لشركة سمارت كينج موفر خدمات الدفع.[cite: 1]" },
+                    { h: "18. اختصاص النزاعات القانونية", p: "أي مطالبة قانونية تتعلق باستخدام هذه البوابة تخضع حصرياً للقوانين المعمول بها في إمارة دبي، الإمارات العربية المتحدة." },
+                    { h: "19. تفسير الشروط", p: "العناوين الواردة في هذا الإخلاء هي للتسهيل فقط ولا تُستخدم لتقييد أو تفسير الأقسام الجوهرية الواردة هنا." },
+                    { h: "20. طواعية استخدام الخدمة", p: "دخولك لهذه البوابة طوعي بالكامل. باستخدامك لها، فأنت تتنازل عن جميع الحقوق في متابعة مطالبات ضد هيكلنا التنظيمي." },
+                    { h: "21. أخطاء الإرسال الإلكتروني", p: "نحن لسنا مسؤولين عن التأخير في انعكاس المدفوعات فعلياً على بوابات مزودي الخدمة بمجرد قيامنا بتمرير العملية بنجاح." },
+                    { h: "22. عدم ضمان أداء النظام", p: "لا نقدم أي ضمانات بأن الواجهة ستعمل بسلاسة على المتصفحات القديمة أو غير القياسية أو غير المدعومة." },
+                    { h: "23. نفي الشراكات الضمنية", p: "لا يتم إنشاء أي وكالة أو شراكة أو مشروع مشترك أو علاقة توظيف نتيجة استخدام خدمات تجميع المدفوعات لدينا." },
+                    { h: "24. دقة معلومات الأسعار", p: "رغم عرضنا للرسوم الإدارية بشفافية، إلا أننا لسنا مسؤولين عن التغييرات في هياكل فوترة مزودي الخدمة التي قد تغير المبالغ النهائية." },
+                    { h: "25. الامتثال للمعايير المحلية", p: "يتحمل المستخدمون المسؤولية عن ضمان امتثال استخدامهم لبوابتنا الرقمية للقوانين المحلية في محل إقامتهم." },
+                    { h: "26. بند الأخطاء والسهو", p: "نخلي مسؤوليتنا الكاملة عن أي أخطاء أو سهو في النصوص أو منطق العمليات المقدم على هذه الواجهة." },
+                    { h: "27. عدم تخزين البيانات الشخصية", p: "نؤكد صراحةً أننا لا نحتفظ ببيانات حساسة دائمة للمستهلكين، حيث يتم معالجة الجلسات فورياً وإتلافها تلقائياً." },
+                    { h: "28. استخدام الأدوات الآلية", p: "الوصول للمنصة عبر البوتات أو أدوات استخراج البيانات محظور تماماً ويشكل انتهاكاً لهذا الإخلاء القانوني." },
+                    { h: "29. استقلالية الأحكام", p: "إذا اعتبر أي جزء من هذا الإخلاء غير صالح، فيتم استبعاده وتظل البنود الـ 34 المتبقية سارية المفعول بالكامل." },
+                    { h: "30. سياسة اللغة الحاكمة", p: "في حالة وجود أي تعارض بين النسختين الإنجليزية والعربية من هذا الإخلاء، تكون النسخة الإنجليزية هي المعتمدة تقنياً." },
+                    { h: "31. سلطة التعديل", p: "الممثلون المعتمدون للشركة فقط لديهم سلطة تعديل هذا الإخلاء، ويتم نشر هذه التعديلات فور نشرها على الموقع." },
+                    { h: "32. التعويض ضد إساءة الاستخدام", p: "يوافق المستخدمون على حماية الشركة ضد جميع المطالبات القانونية الناتجة عن أي إدخال بيانات احتيالي أو استخدام خبيث للواجهة." },
+                    { h: "33. قيود الدعم التقني", p: "قنوات الدعم الخاصة بنا هي للاستفسارات العامة فقط ولا تقدم استشارات قانونية أو مالية." },
+                    { h: "34. نهائية السجلات الإلكترونية", p: "في أي نزاع، تعتبر سجلات خوادم سمارت كينج هي السجل النهائي والحاسم لمحاولات المعاملات." },
+                    { h: "35. القبول المطلق", p: "إن استمرارك في استخدام هذه المنصة يمثل قبولاً نهائياً ومطلقاً لهذا الإخلاء القانوني بجميع بنوده." }
+                ]
+            }
+        };
+
+        function renderPolicy() {
+            const currentData = data[currentLang];
+            document.getElementById('htmlPage').setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+            document.getElementById('htmlPage').setAttribute('lang', currentLang);
+            document.getElementById('logoText').textContent = currentData.logo;
+            document.getElementById('mainTitle').textContent = currentData.title;
+            document.getElementById('metaDate').textContent = currentData.date;
+            document.getElementById('backHomeLink').textContent = currentData.back;
+            document.getElementById('langBtn').textContent = currentData.btn;
+            const container = document.getElementById('policyContent');
+            container.innerHTML = '';
+            currentData.sections.forEach(sec => {
+                const div = document.createElement('div');
+                div.className = 'policy-section';
+                div.innerHTML = `<h2>${sec.h}</h2><p>${sec.p}</p>`;
+                container.appendChild(div);
+            });
+        }
+        function toggleLanguage() { currentLang = currentLang === 'en' ? 'ar' : 'en'; renderPolicy(); }
+        renderPolicy();
+    </script>
+</body>
+</html>
