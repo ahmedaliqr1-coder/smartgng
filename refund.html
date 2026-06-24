@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="htmlPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Policy - SMART KING Payment Services Provider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #d32f2f;
+            --text-dark: #333333;
+            --border-gray: #e0e0e0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #f9f9f9; color: var(--text-dark); font-family: 'Noto Sans', 'Cairo', sans-serif; line-height: 1.8; padding-bottom: 60px; }
+        header { background-color: #ffffff; border-bottom: 1px solid var(--border-gray); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .header-container { width: 90%; max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo-text { font-size: 16px; font-weight: 700; color: var(--primary-red); text-decoration: none; }
+        .lang-btn { background-color: var(--primary-red); color: white; border: none; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; }
+        .content-container { width: 90%; max-width: 1000px; margin: 40px auto; background: #ffffff; padding: 40px; border-radius: 8px; border: 1px solid var(--border-gray); }
+        h1 { font-size: 26px; color: var(--primary-red); margin-bottom: 10px; border-bottom: 2px solid var(--primary-red); padding-bottom: 15px; }
+        .meta-date { font-size: 13px; color: #777; margin-bottom: 30px; }
+        .policy-section { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px dashed #eee; }
+        .policy-section h2 { font-size: 16px; color: #111; margin-bottom: 10px; font-weight: 700; }
+        .policy-section p { font-size: 14px; color: #555; text-align: justify; }
+        .back-home { display: inline-block; margin-top: 20px; color: var(--primary-red); text-decoration: none; font-weight: 600; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-text" id="logoText">SMART KING PSP</a>[cite: 1]
+            <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">العربية</button>
+        </div>
+    </header>
+
+    <div class="content-container">
+        <h1 id="mainTitle">Refund Policy</h1>
+        <div class="meta-date" id="metaDate">Last Updated: June 24, 2026</div>
+
+        <div id="policyContent"></div>
+
+        <a href="index.html" class="back-home" id="backHomeLink">← Back to Main Page</a>
+    </div>
+
+    <script>
+        let currentLang = 'en';
+        const data = {
+            en: {
+                logo: "SMART KING Payment Services Provider",[cite: 1]
+                title: "Refund Policy",
+                date: "Last Updated: June 24, 2026",
+                back: "← Back to Main Page",
+                btn: "العربية",
+                sections: [
+                    { h: "1. Policy Applicability Scope", p: "This Refund Policy applies specifically to the aggregation and processing services provided by SMART KING Payment Services Provider.[cite: 1]" },
+                    { h: "2. Finality of Transaction Submission", p: "Due to the real-time routing nature of our payment gateway, all successful fee aggregations are deemed final and non-refundable upon processing." },
+                    { h: "3. User Responsibility for Accuracy", p: "Users must verify all payment details. We assume no liability for funds successfully routed to incorrect accounts provided during input." },
+                    { h: "4. No Automatic Cancellation Clause", p: "The system design does not include a 'cancel' function post-submission, as requests are instantaneously pushed to external telecom clearing networks." },
+                    { h: "5. Discrepancy Reporting Protocols", p: "In the event of a technical charge discrepancy, users must contact support with a valid transaction reference code within 24 hours." },
+                    { h: "6. Bank Processing Timeframes", p: "Any potential reversal authorized by our administrative team is subject to standard banking clearing cycles which may take 7-14 business days." },
+                    { h: "7. Third-Party Settlement Indemnity", p: "We do not control the internal policies of utility companies; therefore, we cannot force refunds for payments already settled in their systems." },
+                    { h: "8. Duplicate Payment Handling", p: "If a technical error causes duplicate billing, documentation proof must be provided to initiate an investigation into a manual reversal." },
+                    { h: "9. Unauthorized Transaction Policy", p: "Payments made with stolen or unauthorized card credentials are handled in accordance with local anti-fraud legal guidelines." },
+                    { h: "10. Proof of Payment Requirement", p: "All refund requests must include the original system-generated transaction ID to be considered for manual review." },
+                    { h: "11. Limitation on Refund Eligibility", p: "Refunds are restricted strictly to proven technical errors of the platform, not user-driven errors like wrong service selection." },
+                    { h: "12. Administrative Fee Retention", p: "In cases where a refund is processed, non-refundable administrative fees originally charged for the routing process will be deducted." },
+                    { h: "13. Dispute Resolution Finality", p: "The decision made by the SMART KING administrative oversight committee regarding refund eligibility is deemed final." },
+                    { h: "14. Regional Compliance Standards", p: "Refund operations are conducted within the strict guidelines of UAE commercial laws regarding digital service delivery.[cite: 1]" },
+                    { h: "15. Communication of Claims", p: "Claims must be submitted via our official corporate communication channels located at our Dubai headquarters." },
+                    { h: "16. Technical Failure Indemnity", p: "We are not liable for refunding costs incurred by ISP or network provider connectivity issues during payment submission." },
+                    { h: "17. Currency Conversion Impact", p: "Refunded amounts will be based on the original AED transaction value; we do not account for external currency fluctuation losses." },
+                    { h: "18. Fraud Investigation Procedures", p: "Refund requests flagged for potential fraud will be suspended indefinitely pending clearance from local authorities." },
+                    { h: "19. Service Availability Disclaimer", p: "Temporary site maintenance does not qualify for payment refunds for transactions that successfully cleared prior to the outage." },
+                    { h: "20. Electronic Receipt Validity", p: "The digital receipt provided upon completion serves as the official proof of service delivery for all purposes." },
+                    { h: "21. Third-Party Service Providers", p: "We act as a conduit; any dispute regarding the utility service itself must be addressed with the utility provider directly." },
+                    { h: "22. Account Verification Requirements", p: "We reserve the right to demand identity verification documents before authorizing any manual refund to a bank account." },
+                    { h: "23. Modification of Policy", p: "We reserve the right to amend this refund policy at any time, with updates effective immediately upon web publication." },
+                    { h: "24. Prohibition of Chargeback Abuse", p: "Filing illegitimate chargebacks with a bank will result in the immediate and permanent blacklisting of the user's IP from our services." },
+                    { h: "25. Settlement Records Audit", p: "All refund claims are cross-checked against our encrypted server-side logs to confirm actual platform processing status." },
+                    { h: "26. Zero Refund for Completed Services", p: "Once a utility bill is cleared, the service is considered fully consumed, eliminating any basis for a refund." },
+                    { h: "27. Support Channel Limitations", p: "Automated support scripts cannot authorize refunds; all requests require manual approval from our compliance team." },
+                    { h: "28. Governing Law of Refunds", p: "The interpretation of these refund terms is governed strictly by the laws of the Emirate of Dubai, UAE." },
+                    { h: "29. Severability Clause", p: "If one clause is found invalid, the remaining 34 clauses in this policy retain their full legal strength." },
+                    { h: "30. Privacy During Investigation", p: "Investigation of refund claims will strictly adhere to our data protection protocols and Privacy Policy.[cite: 1]" },
+                    { h: "31. Documentation Submission", p: "Submission of a refund claim does not guarantee a refund; it only initiates a formal administrative review process." },
+                    { h: "32. Scope of Liability", p: "Our liability is limited exclusively to the nominal amount of the transaction processed through our portal." },
+                    { h: "33. Technical Interoperability", p: "We are not responsible for how individual banks display the refund once it has been processed from our side." },
+                    { h: "34. Final Acceptance of Terms", p: "Using our payment platform constitutes an agreement to the non-refundable nature of finalized transactions." },
+                    { h: "35. Contact Information", p: "For administrative review requests, contact our office at Office 411-9, Al Khabeesi, Deira, Dubai." }
+                ]
+            },
+            ar: {
+                logo: "سمارت كينج موفر خدمات الدفع",[cite: 1]
+                title: "سياسة الاسترداد والإلغاء",
+                date: "آخر تحديث: 24 يونيو 2026",
+                back: "← العودة للصفحة الرئيسية",
+                btn: "English",
+                sections: [
+                    { h: "1. نطاق تطبيق السياسة", p: "تنطبق سياسة الاسترداد هذه حصرياً على خدمات تجميع ومعالجة المدفوعات المقدمة من شركة سمارت كينج موفر خدمات الدفع.[cite: 1]" },
+                    { h: "2. نهائية تنفيذ المعاملات", p: "نظراً لطبيعة التوجيه الفوري لبوابة الدفع الخاصة بنا، تعتبر جميع عمليات تحصيل الرسوم الناجحة نهائية وغير قابلة للاسترداد بمجرد معالجتها." },
+                    { h: "3. مسؤولية المستخدم عن الدقة", p: "يجب على المستخدمين التحقق من كافة بيانات الدفع. لا نتحمل أي مسؤولية عن الأموال التي تُوجه لحسابات خاطئة بسبب خطأ في الإدخال." },
+                    { h: "4. عدم وجود بند للإلغاء التلقائي", p: "لا يتضمن تصميم النظام وظيفة 'إلغاء' بعد الإرسال، حيث يتم تمرير الطلبات فورياً لشبكات المقاصة التابعة لشركات الاتصالات." },
+                    { h: "5. بروتوكولات الإبلاغ عن التناقضات", p: "في حالة حدوث تناقض في الرسوم، يجب على المستخدمين التواصل مع الدعم وتقديم رمز مرجع المعاملة الصحيح خلال 24 ساعة." },
+                    { h: "6. فترات المعالجة البنكية", p: "أي عملية عكس مالي معتمدة من فريقنا الإداري تخضع لدورات المقاصة البنكية القياسية التي قد تستغرق من 7 إلى 14 يوم عمل." },
+                    { h: "7. تعويض تسويات الطرف الثالث", p: "نحن لا نتحكم في سياسات شركات الخدمات؛ وبالتالي لا يمكننا فرض استرداد مبالغ تم تسويتها بالفعل في أنظمتهم." },
+                    { h: "8. معالجة المدفوعات المكررة", p: "في حال تسبب خطأ تقني في فواتير مكررة، يجب تقديم إثباتات موثقة لبدء تحقيق في إمكانية إجراء عكس يدوي." },
+                    { h: "9. سياسة المعاملات غير المصرح بها", p: "يتم التعامل مع المدفوعات التي تتم ببطاقات مسروقة أو غير مصرح بها وفقاً للوائح القانونية المحلية لمكافحة الاحتيال." },
+                    { h: "10. متطلبات إثبات الدفع", p: "يجب أن تتضمن جميع طلبات الاسترداد رقم تعريف المعاملة الأصلي المستخرج من النظام ليتم النظر فيها في المراجعة اليدوية." },
+                    { h: "11. قيود أهلية الاسترداد", p: "يقتصر الاسترداد حصرياً على الأخطاء التقنية المثبتة للمنصة، ولا يشمل الأخطاء الناتجة عن اختيار المستخدم لخدمة خاطئة." },
+                    { h: "12. احتجاز الرسوم الإدارية", p: "في الحالات التي تتم فيها الموافقة على الاسترداد، سيتم خصم الرسوم الإدارية غير القابلة للاسترداد والمحتسبة لعملية التوجيه." },
+                    { h: "13. نهائية تسوية النزاعات", p: "يعتبر القرار الصادر عن لجنة الرقابة الإدارية في سمارت كينج بخصوص أحقية الاسترداد قراراً نهائياً." },
+                    { h: "14. معايير الامتثال الإقليمي", p: "تُجرى عمليات الاسترداد ضمن الإرشادات الصارمة للقوانين التجارية في دولة الإمارات العربية المتحدة المتعلقة بتقديم الخدمات الرقمية.[cite: 1]" },
+                    { h: "15. مراسلات المطالبات", p: "يجب تقديم المطالبات عبر قنوات الاتصال الرسمية للمؤسسة الموجودة في مقرنا الرئيسي بدبي." },
+                    { h: "16. إخلاء المسؤولية عن الفشل التقني", p: "لسنا مسؤولين عن استرداد التكاليف التي يتكبدها المستخدم بسبب مشاكل اتصال الإنترنت أو مزودي الشبكة أثناء إرسال الدفع." },
+                    { h: "17. تأثير تحويل العملات", p: "ستعتمد المبالغ المستردة على قيمة المعاملة الأصلية بالدرهم الإماراتي؛ ولا نتحمل خسائر تقلبات العملة الخارجية." },
+                    { h: "18. إجراءات التحقيق في الاحتيال", p: "طلبات الاسترداد التي يُشتبه في كونها احتيالية سيتم تعليقها لأجل غير مسمى لحين الحصول على موافقة السلطات المحلية." },
+                    { h: "19. إخلاء المسؤولية عن توفر الخدمة", p: "أعمال الصيانة المؤقتة للموقع لا تؤهل المستخدم لاسترداد أي مبالغ للمعاملات التي اكتملت بنجاح قبل التوقف." },
+                    { h: "20. حجية الإيصال الإلكتروني", p: "يُعتبر الإيصال الرقمي المقدم عند اكتمال العملية إثباتاً رسمياً على تقديم الخدمة لجميع الأغراض." },
+                    { h: "21. مزودو خدمات الطرف الثالث", p: "نحن نعمل كوسيط؛ أي نزاع يتعلق بخدمة الخدمة نفسها يجب أن يوجه لمزود الخدمة مباشرة." },
+                    { h: "22. متطلبات التحقق من الحساب", p: "نحتفظ بالحق في طلب وثائق للتحقق من الهوية قبل تفويض أي استرداد مالي يدوي لحساب بنكي." },
+                    { h: "23. تعديل السياسة", p: "نحتفظ بالحق في تعديل سياسة الاسترداد هذه في أي وقت، وتصبح التحديثات نافذة فور نشرها على الموقع." },
+                    { h: "24. حظر إساءة استخدام استرداد الأموال", p: "تقديم مطالبات استرداد غير مشروعة للبنوك سيؤدي إلى حظر دائم وفوري لعنوان IP المستخدم من خدماتنا." },
+                    { h: "25. تدقيق سجلات التسوية", p: "يتم مطابقة جميع مطالبات الاسترداد مع سجلات خادمنا المشفرة لتأكيد حالة المعالجة الفعلية للمنصة." },
+                    { h: "26. عدم وجود استرداد للخدمات المكتملة", p: "بمجرد سداد فاتورة الخدمة، تُعتبر الخدمة مستهلكة بالكامل، مما يلغي أي أساس للمطالبة بالاسترداد." },
+                    { h: "27. قيود قنوات الدعم", p: "لا يمكن لبرامج الدعم الآلية تفويض الاسترداد؛ تتطلب جميع الطلبات موافقة يدوية من فريق الامتثال لدينا." },
+                    { h: "28. القانون الحاكم للاسترداد", p: "يخضع تفسير شروط الاسترداد هذه حصرياً للقوانين المعمول بها في إمارة دبي، دولة الإمارات العربية المتحدة." },
+                    { h: "29. بند استقلالية البنود", p: "إذا اعتبر أي بند غير صالح، تظل البنود الـ 34 المتبقية في هذه السياسة محتفظة بكامل قوتها القانونية." },
+                    { h: "30. الخصوصية أثناء التحقيق", p: "سيلتزم التحقيق في مطالبات الاسترداد بدقة ببروتوكولات حماية البيانات وسياسة الخصوصية الخاصة بنا.[cite: 1]" },
+                    { h: "31. تقديم الوثائق", p: "تقديم مطالبة استرداد لا يضمن الحصول على استرداد؛ بل يبدأ فقط عملية مراجعة إدارية رسمية." },
+                    { h: "32. نطاق المسؤولية", p: "تقتصر مسؤوليتنا حصرياً على المبلغ الاسمي للمعاملة التي تمت معالجتها من خلال بوابتنا." },
+                    { h: "33. التوافق التقني", p: "لسنا مسؤولين عن كيفية عرض البنوك الفردية لعملية الاسترداد بمجرد معالجتها من جانبنا." },
+                    { h: "34. القبول النهائي للشروط", p: "إن استخدام بوابة الدفع الخاصة بنا يمثل اتفاقاً على الطبيعة غير القابلة للاسترداد للمعاملات النهائية." },
+                    { h: "35. معلومات الاتصال", p: "لطلبات المراجعة الإدارية، يرجى الاتصال بمكتبنا في دبي، ديرة، الخبيصي، مكتب رقم 411-9." }
+                ]
+            }
+        };
+
+        function renderPolicy() {
+            const currentData = data[currentLang];
+            document.getElementById('htmlPage').setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+            document.getElementById('htmlPage').setAttribute('lang', currentLang);
+            document.getElementById('logoText').textContent = currentData.logo;
+            document.getElementById('mainTitle').textContent = currentData.title;
+            document.getElementById('metaDate').textContent = currentData.date;
+            document.getElementById('backHomeLink').textContent = currentData.back;
+            document.getElementById('langBtn').textContent = currentData.btn;
+            const container = document.getElementById('policyContent');
+            container.innerHTML = '';
+            currentData.sections.forEach(sec => {
+                const div = document.createElement('div');
+                div.className = 'policy-section';
+                div.innerHTML = `<h2>${sec.h}</h2><p>${sec.p}</p>`;
+                container.appendChild(div);
+            });
+        }
+        function toggleLanguage() { currentLang = currentLang === 'en' ? 'ar' : 'en'; renderPolicy(); }
+        renderPolicy();
+    </script>
+</body>
+</html>
