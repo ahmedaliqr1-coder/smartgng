@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سمارت كينج موفر خدمات الدفع - حلول دفع رقمية متكاملة</title>
+    <!-- Google Fonts لتنسيق الخط العربي بشكل احترافي -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #d32f2f; /* اللون الأحمر الرسمي */
+            --dark-bg: #111111;     /* اللون الأسود للفوتر */
+            --text-dark: #333333;
+            --text-light: #ffffff;
+            --border-gray: #e0e0e0;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* ------------------ الهيدر ------------------ */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border-gray);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* الثلاث شرطات (القائمة الجانبية) */
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 22px;
+            height: 15px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: var(--text-dark);
+            border-radius: 2px;
+        }
+
+        /* اسم الشركة بخط صغير وفي سطر واحد مستقيم */
+        .company-logo-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--primary-red);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        /* زر تبديل اللغة */
+        .lang-switch-btn {
+            background-color: transparent;
+            border: 1px solid var(--primary-red);
+            color: var(--primary-red);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-switch-btn:hover {
+            background-color: var(--primary-red);
+            color: var(--text-light);
+        }
+
+        /* ------------------ قسم الترحيب والعنوان ------------------ */
+        .hero-section {
+            text-align: center;
+            padding: 50px 20px 30px 20px;
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .hero-section h1 {
+            font-size: 24px;
+            color: var(--text-dark);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero-section p {
+            font-size: 16px;
+            color: #666666;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        /* ------------------ أزرار الخدمة (زرارين) ------------------ */
+        .action-buttons-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 40px 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .service-btn {
+            width: 100%;
+            background-color: var(--primary-red);
+            color: var(--text-light);
+            border: none;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(211, 47, 47, 0.15);
+        }
+
+        .service-btn:hover {
+            background-color: #b71c1c;
+            transform: translateY(-1px);
+        }
+
+        /* ------------------ قسم الأسئلة الشائعة تفاعلي ------------------ */
+        .faq-section {
+            width: 90%;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .faq-section-title {
+            text-align: center;
+            font-size: 22px;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .faq-card {
+            background-color: var(--card-bg);
+            border: 2px solid var(--primary-red);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .faq-question-btn {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 18px 20px;
+            text-align: right;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s ease;
+        }
+
+        .faq-question-btn:hover {
+            background-color: #fff8f8;
+        }
+
+        .faq-icon {
+            color: var(--primary-red);
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            margin-right: 10px;
+        }
+
+        .faq-answer-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            background-color: #fafafa;
+            padding: 0 20px;
+        }
+
+        .faq-answer-content p {
+            font-size: 14px;
+            color: #555555;
+            padding-bottom: 18px;
+            text-align: justify;
+        }
+
+        .faq-card.active .faq-answer-content {
+            max-height: 200px;
+            padding-top: 5px;
+        }
+
+        /* ------------------ روابط السياسات تحت الأسئلة ------------------ */
+        .policy-links-container {
+            text-align: center;
+            padding: 20px 20px 50px 20px;
+            border-top: 1px solid var(--border-gray);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .policy-link {
+            color: #555555;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+
+        .policy-link:hover {
+            color: var(--primary-red);
+            text-decoration: underline;
+        }
+
+        /* ------------------ الفوتر الأسود الكامل ------------------ */
+        footer {
+            background-color: var(--dark-bg);
+            color: #b3b3b3;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 14px;
+            border-top: 4px solid var(--primary-red);
+        }
+
+        .footer-content {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .license-details-box {
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #222222;
+        }
+
+        .license-details-box strong {
+            color: var(--text-light);
+        }
+
+        .footer-bottom-copyright {
+            color: #888888;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+
+        .footer-bottom-copyright span {
+            color: var(--text-light);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر الرئيسي المتكامل -->
+    <header>
+        <div class="header-container">
+            <div class="menu-toggle" id="sideMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <a href="#" class="company-logo-name">سمارت كينج موفر خدمات الدفع</a>[cite: 1]
+            
+            <button class="lang-switch-btn" onclick="switchToEnglish()">English</button>
+        </div>
+    </header>
+
+    <!-- قسم اسم الشركة والترحيب أسفل الهيدر مباشرة -->
+    <section class="hero-section">
+        <h1>سمارت كينج موفر خدمات الدفع</h1>[cite: 1]
+        <p>حلول متكاملة لإعادة تعبئة الرصيد ودفع الفواتير مع سمارت كينج</p>
+    </section>
+
+    <!-- قسم أزرار الخدمات -->
+    <main>
+        <div class="action-buttons-container">
+            <button class="service-btn" onclick="handleServiceClick('recharge')">إعادة تعبئة خطك</button>
+            <button class="service-btn" onclick="handleServiceClick('payment')">دفع الفواتير</button>
+        </div>
+
+        <!-- قسم الـ 10 أسئلة شائعة المحددة بحواف حمراء وبخاصية الفتح والإغلاق -->
+        <section class="faq-section">
+            <h2 class="faq-section-title">الأسئلة الشائعة</h2>
+            
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>ما هي منصة سمارت كينج؟</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>نحن بوابة دفع إلكترونية تكنولوجية مستقلة مرخصة متخصصة في تسهيل عمليات تحصيل رسوم الخدمات العامة وتجميع مدفوعات فواتير الاتصالات للمستهلكين بكل أمان وسهولة.[cite: 1]</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>هل منصة سمارت كينج تابعة لشركة اتصالات معينة؟</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>لا، نحن بوابة تحصيل تقنية مستقلة تماماً ولا نمثل أي وكالة حصرية أو شراكة رسمية مع أي من مشغلي الشبكات؛ ويقتصر ذكر أسماء الشبكات كدلالة وظيفية لإرشاد المستخدمين.[cite: 1]</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>ما هي الخدمات التي يمكنني إتمامها عبر الموقع؟</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>يمكنك الاستفادة من حلولنا المتكاملة لإعادة تعبئة الرصيد الفوري، ودفع فواتير الاتصالات العامة، وتحصيل رسوم الخدمات عبر الواجهة الآمنة المتاحة للجمهور.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>هل عمليات الدفع عبر البوابة آمنة؟</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>نعم، جميع المعاملات والتسويات المالية التي تتم عبر أنظمتنا مشفرة بالكامل بواسطة بروتوكولات حماية SSL المتقدمة لضمان سرية وأمان معلومات العميل.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>ما هو النشاط التجاري الرسمي المعتمد للمنصة؟</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>النشاط الرسمي المصرح به للشركة بموجب رخصتها الصادرة عن دائرة الاقتصاد والسياحة في دبي هو خدمات تحصيل الرسوم والدفعيات.[cite: 1]</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>كم تستغرق عملية تسوية الفاتورة أو شحن الرصيد؟</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>تتم معالجة وتمرير الدفعيات من خلال محرك التحصيل الآلي الخاص بنا بشكل فوري، وتظهر التسوية في حساب الخدمة الخاص بك مباشرة بعد الإتمام السليم.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>كيف يمكنني التأكد من التراخيص الرسمية للموقع؟</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>يمكنك الاستعلام العام عن رخصتنا التجارية رقم 1563123 مباشرة عبر البوابة الإلكترونية الرسمية لدائرة الاقتصاد والسياحة في دبي للتأكد من وضعنا القانوني.[cite: 1]</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>هل هناك رسوم إضافية على خدمات التحصيل؟</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>تظهر لك تفاصيل المبالغ والرسوم الإدارية المستحقة بشكل شفاف وواضح في واجهة الدفع قبل تأكيد أي معاملة وبدون أي تكاليف مخفية.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>ما هي سياسة الاسترداد المتبعة في حال حدوث خطأ؟</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>في حال حدوث أي خطأ تقني أو عدم إتمام التسوية بنجاح، يتم مراجعة العملية وإعادة المبالغ تلقائياً إلى وسيلة الدفع الأصلية وفقاً لسياسة الاسترداد والإلغاء المعتمدة لدينا.</p>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <button class="faq-question-btn">
+                    <span>كيف يمكنني التواصل مع الدعم الفني للمنصة؟</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-content">
+                    <p>يمكنك التواصل مع فريق الدعم الفني وخدمة العملاء من خلال قنوات المراسلة ووسائل الاتصال الرسمية المدرجة والمتاحة بداخل صفحات الشروط والأحكام الخاصة بنا.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="policy-links-container">
+            <a href="privacy.html" class="policy-link">سياسة الخصوصية</a>
+            <a href="terms.html" class="policy-link">الشروط والأحكام</a>
+            <a href="disclaimer.html" class="policy-link">إخلاء المسؤولية القانونية</a>
+            <a href="refund.html" class="policy-link">سياسة الاسترداد والإلغاء</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="license-details-box">
+                <strong>البيانات القانونية للمؤسسة:</strong><br>
+                الرخصة التجارية رقم: 1563123 | الرخصة الموحدة: ES3679[cite: 1]<br>
+                سلطة الإصدار: دائرة الاقتصاد والسياحة بدبي، دولة الإمارات العربية المتحدة[cite: 1]<br>
+                أنشطة الرخصة المعتمَدة: خدمات تحصيل الرسوم والدفعيات[cite: 1]<br>
+                العنوان الرسمي: مكتب 411-9 الخبيصي، ديرة، دبي، صندوق بريد: 47867[cite: 1]
+            </div>
+            
+            <hr style="border: 0; border-top: 1px solid #222222; margin: 15px 0;">
+            
+            <div class="footer-bottom-copyright">
+                &copy; 2026 جميع الحقوق محفوظة. يتم تشغيل هذا الموقع بواسطة <span>شركة سمارت كينج موفر خدمات الدفع</span>[cite: 1]
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchToEnglish() {
+            window.location.href = "index.html";
+        }
+
+        function handleServiceClick(serviceType) {
+            console.log("Service selected:", serviceType);
+        }
+
+        const faqButtons = document.querySelectorAll('.faq-question-btn');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.parentElement;
+                const icon = button.querySelector('.faq-icon');
+                
+                document.querySelectorAll('.faq-card').forEach(otherCard => {
+                    if (otherCard !== card && otherCard.classList.contains('active')) {
+                        otherCard.classList.remove('active');
+                        otherCard.querySelector('.faq-icon').textContent = '+';
+                    }
+                });
+
+                card.classList.toggle('active');
+                if (card.classList.contains('active')) {
+                    icon.textContent = '−';
+                } else {
+                    icon.textContent = '+';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
