@@ -59,6 +59,8 @@
             width: 22px;
             height: 15px;
             cursor: pointer;
+            visibility: visible !important;
+            opacity: 1 !important;
         }
 
         .menu-toggle span {
@@ -71,11 +73,14 @@
 
         /* Company Name in Single Line & Small Font */
         .company-logo-name {
-            font-size: 15px;
-            font-weight: 700;
+            font-size: 12px;
+            font-weight: 600;
             color: var(--primary-red);
             text-decoration: none;
             white-space: nowrap;
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         /* Language Switch Button */
@@ -448,7 +453,7 @@
 
     <script>
         function switchToArabic() {
-            window.location.href = "ar.html";
+            window.location.href = "index-ar.html";
         }
 
         function handleServiceClick(serviceType) {
